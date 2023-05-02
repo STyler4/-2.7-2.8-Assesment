@@ -1,5 +1,5 @@
-"""Create a menu using easygui to navigate
-through the problem using different options"""
+"""In this version I will be fixing up output problems when
+finding monsters"""
 
 import easygui
 
