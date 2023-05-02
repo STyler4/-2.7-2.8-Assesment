@@ -6,7 +6,7 @@ import easygui
 card_list = ["Stoneling", "Vexscream", "Dawnmirage", "Blazegolem", "Websnake", "Moldvine", "Vortexwing", "Rotthing",
              "Froststep", "Wispghoul"]
 
-cards = {name: None for name in card_list}
+cards = {name: "" for name in card_list}
 
 
 while True:
@@ -14,16 +14,16 @@ while True:
                                                                                "Delete Monster", "Output all", "Exit"])
     if choice == "Add Monster":
         name = easygui.enterbox("Enter the monsters name: ")
-
-        cards[name] = None
+        cards[name] = ""
 
     elif choice == "Find Monster":
         name = easygui.enterbox("Enter the monster name you want to search for: ")
 
         if name in cards:
             if cards[name] is not None:
-                easygui.msgbox(f"Search matched: {name} ")
-
+                easygui.msgbox(f"Match found :{name}")
+            else:
+                easygui.msgbox(f"{name} is in the list but has no value.")
         else:
             easygui.msgbox(f"{name} not found")
 
