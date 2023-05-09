@@ -1,5 +1,5 @@
-"""In this version I will be fixing up output problems when
-finding monsters"""
+"""In this version I have created values for monsters already in the list but also for the monsters that are
+being created/ input into the program """
 
 import easygui
 
