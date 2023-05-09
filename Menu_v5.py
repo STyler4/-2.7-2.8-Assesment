@@ -1,5 +1,5 @@
-"""In this version I have created values for monsters already in the list but also for the monsters that are
-being created/ input into the program """
+"""In this version I have changed the output so that the program will also output the monster's 'strength', 'speed',
+ 'stealth', 'cunning"""
 
 import easygui
 
