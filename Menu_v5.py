@@ -66,8 +66,9 @@ while True:
 
     elif choice == "Output all":
         output = "Monsters:\n"
-        for name in cards.keys():
-            output += f"- {name}\n"
+        for name, attributes in cards.items():
+            output += f"- {name}: Strength={attributes['Strength']} Speed={attributes['Speed']} "
+            output += f"Stealth={attributes['Stealth']} Cunning={attributes['Cunning']}\n"
         easygui.msgbox(output)
 
     elif choice == "Exit":
