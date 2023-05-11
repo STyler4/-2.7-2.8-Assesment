@@ -7,7 +7,6 @@ import easygui
 card_list = ["Stoneling", "Vexscream", "Dawnmirage", "Blazegolem", "Websnake", "Moldvine", "Vortexwing", "Rotthing",
              "Froststep", "Wispghoul"]
 
-
 cards = {
     "Stoneling": {"Strength": 7, "Speed": 1, "Stealth": 25, "Cunning": 15},
     "Vexscream": {"Strength": 1, "Speed": 6, "Stealth": 21, "Cunning": 19},
@@ -45,12 +44,9 @@ while True:
         name = easygui.enterbox("Enter the monster name you want to search for: ").title()
 
         if name in cards:
-            if cards[name]:
-                easygui.msgbox(f"Match found: {name}\nStrength: {cards[name]['strength']}\nSpeed: "
-                               f"{cards[name]['speed']}\nStealth: {cards[name]['stealth']}\nCunning: "
-                               f"{cards[name]['cunning']}")
-            else:
-                easygui.msgbox(f"{name} is in the list but has no value.")
+            attributes = cards[name]
+            easygui.msgbox(f"Match found: {name}\nStrength: {attributes['Strength']}\nSpeed: {attributes['Speed']}"
+                           f"\nStealth: {attributes['Stealth']}\nCunning: {attributes['Cunning']}")
         else:
             easygui.msgbox(f"{name} not found")
 
