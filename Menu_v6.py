@@ -68,4 +68,12 @@ while True:
         easygui.msgbox(output)
 
     elif choice == "Exit":
+        symbol = "!"
+        text = "Thank you for using this catalogue, Bye "
+        sides = symbol * 3
+
+        formatted_text = f"{sides} {text} {sides}"
+        top_bottom = symbol * len(formatted_text)
+
+        easygui.msgbox(formatted_text)
         break
