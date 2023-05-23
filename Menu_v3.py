@@ -1,5 +1,4 @@
-"""In this version I will be fixing up output problems when
-finding monsters"""
+"""In this version I have decided to use a list including the values of their abilities"""
 
 import easygui
 
