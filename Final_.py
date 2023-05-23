@@ -1,16 +1,20 @@
+"""Adding Comments making the code easier to follow for new users if code needs to be edited"""
+
 import easygui
 
+# Making user input name for a formal greeting from the program
 name = easygui.enterbox("What is your name")
 symbol = "!"
 text = "Welcome to the monster card catalogue"
 sides = symbol * 3
 
+# Output of formal greeting
 formatted_text = f"{sides} {text} {name.upper()} {sides}"
 top_bottom = symbol * len(formatted_text)
 
 easygui.msgbox(formatted_text)
 
-# card values
+# Card values
 card_list = ["Stoneling", "Vexscream", "Dawnmirage", "Blazegolem", "Websnake", "Moldvine", "Vortexwing", "Rotthing",
              "Froststep", "Wispghoul"]
 
@@ -68,6 +72,7 @@ while True:
         else:
             easygui.msgbox(f"{name} not found.")
 
+    # Output all including Strengths, Speeds, Stealth, Cunning
     elif choice == "Output all":
         output = "Monsters:\n"
         for name, attributes in cards.items():
@@ -75,6 +80,7 @@ while True:
             output += f"Stealth={attributes['Stealth']} Cunning={attributes['Cunning']}\n"
         easygui.msgbox(output)
 
+    # Exiting program and thanking user
     elif choice == "Exit":
         symbol = "!"
         text = "Thank you for using this catalogue, Bye "
