@@ -1,4 +1,6 @@
-"""Adding Comments making the code easier to follow for new users if code needs to be edited"""
+"""Adding Comments making the code easier to
+follow for new users if code needs to be edited
+"""
 
 import easygui
 
@@ -15,7 +17,8 @@ top_bottom = symbol * len(formatted_text)
 easygui.msgbox(formatted_text)
 
 # Card values
-card_list = ["Stoneling", "Vexscream", "Dawnmirage", "Blazegolem", "Websnake", "Moldvine", "Vortexwing", "Rotthing",
+card_list = ["Stoneling", "Vexscream", "Dawnmirage", "Blazegolem", "Websnake",
+             "Moldvine", "Vortexwing", "Rotthing",
              "Froststep", "Wispghoul"]
 
 cards = {
@@ -33,8 +36,11 @@ cards = {
 
 
 while True:
-    choice = easygui.buttonbox("What would you like to do?", "Monster Cards", ["Add Monster", "Find Monster",
-                                                                               "Delete Monster", "Output all", "Exit"])
+    choice = easygui.buttonbox("What would you like to do?",
+                               "Monster Cards", ["Add Monster",
+                                                 "Find Monster",
+                                                 "Delete Monster",
+                                                 "Output all", "Exit"])
     # Input new monster
     if choice == "Add Monster":
         name = easygui.enterbox("Enter the monster's name:").title()
@@ -53,18 +59,23 @@ while True:
 
     # Find monster
     elif choice == "Find Monster":
-        name = easygui.enterbox("Enter the monster name you want to search for: ").title()
+        name = easygui.enterbox("Enter the monster name "
+                                "you want to search for: ").title()
 
         if name in cards:
             attributes = cards[name]
-            easygui.msgbox(f"Match found: {name}\nStrength: {attributes['Strength']}\nSpeed: {attributes['Speed']}"
-                           f"\nStealth: {attributes['Stealth']}\nCunning: {attributes['Cunning']}")
+            easygui.msgbox(f"Match found: {name}\n"
+                           f"Strength: {attributes['Strength']}\n"
+                           f"Speed: {attributes['Speed']}"
+                           f"\nStealth: {attributes['Stealth']}\n"
+                           f"Cunning: {attributes['Cunning']}")
         else:
             easygui.msgbox(f"{name} not found")
 
     # Delete monster
     elif choice == "Delete Monster":
-        name = easygui.enterbox("Enter the Monster name to delete:").title()
+        name = easygui.enterbox("Enter the Monster "
+                                "name to delete:").title()
 
         if name in cards:
             del cards[name]
@@ -76,8 +87,10 @@ while True:
     elif choice == "Output all":
         output = "Monsters:\n"
         for name, attributes in cards.items():
-            output += f"- {name}: Strength={attributes['Strength']} Speed={attributes['Speed']} "
-            output += f"Stealth={attributes['Stealth']} Cunning={attributes['Cunning']}\n"
+            output += f"- {name}: Strength={attributes['Strength']} " \
+                      f"Speed={attributes['Speed']} "
+            output += f"Stealth={attributes['Stealth']} " \
+                      f"Cunning={attributes['Cunning']}\n"
         easygui.msgbox(output)
 
     # Exiting program and thanking user
