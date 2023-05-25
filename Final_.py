@@ -50,12 +50,12 @@ while True:
         cunning = int(easygui.enterbox("Enter the monster's cunning:"))
 
         cards[name] = {
-            "strength": strength,
-            "speed": speed,
-            "stealth": stealth,
-            "cunning": cunning
+            "Strength": strength,
+            "Speed": speed,
+            "Stealth": stealth,
+            "Cunning": cunning
         }
-        easygui.msgbox(cards[name], name)
+        easygui.msgbox(f"{name} added to the card catalogue.")
 
     # Find monster
     elif choice == "Find Monster":
